@@ -1,0 +1,500 @@
+.my-appointments {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  color: #164b47;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.my-appointments-heading {
+  margin-bottom: 28px;
+}
+
+.my-appointments-heading span {
+  color: #168b7b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.my-appointments-heading h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.my-appointments-heading p {
+  color: #718987;
+  line-height: 1.6;
+}
+
+.appointment-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.appointment-summary div {
+  background: #fff;
+  border: 1px solid #dcebe7;
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appointment-summary span {
+  color: #718987;
+  font-size: 13px;
+}
+
+.appointment-summary strong {
+  font-size: 27px;
+}
+
+.appointment-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.appointment-toolbar select {
+  min-height: 44px;
+  padding: 12px 16px;
+  border: 1px solid #cfe2df;
+  border-radius: 10px;
+  color: #164b47;
+  background: #fff;
+  font: inherit;
+}
+
+.appointment-refresh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #168b7b;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.appointment-refresh:hover {
+  background: #087568;
+}
+
+.appointment-refresh:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.appointment-list {
+  display: grid;
+  gap: 20px;
+}
+
+.appointment-card {
+  background: #fff;
+  border: 1px solid #dcebe7;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 5px 20px rgba(20, 75, 65, 0.04);
+  min-width: 0;
+}
+
+.appointment-doctor {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.appointment-doctor img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  flex-shrink: 0;
+}
+
+.appointment-doctor h3 {
+  margin: 0 0 7px;
+}
+
+.appointment-doctor p {
+  margin: 0;
+  color: #718987;
+}
+
+.appointment-status {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.appointment-status.booked {
+  background: #e5f6ef;
+  color: #16845d;
+}
+
+.appointment-status.cancelled {
+  background: #fff0ed;
+  color: #c44d3d;
+}
+
+.appointment-information {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 25px;
+  padding: 20px 0;
+  margin-top: 12px;
+  border-top: 1px solid #edf2f0;
+}
+
+.appointment-information p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #526e69;
+  margin: 0;
+  font-size: 14px;
+}
+
+.appointment-information p svg {
+  flex-shrink: 0;
+  color: #168b7b;
+}
+
+.appointment-information strong {
+  width: 100%;
+  color: #164b47;
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.reschedule-appointment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 17px;
+  border: none;
+  border-radius: 9px;
+  background: #e4f4f0;
+  color: #147b6d;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.reschedule-appointment:hover {
+  background: #d3ebe4;
+}
+
+.cancel-appointment {
+  padding: 11px 17px;
+  border: 1px solid #e6aaa2;
+  border-radius: 9px;
+  background: #fff;
+  color: #c44d3d;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cancel-appointment:hover {
+  background: #fff0ed;
+}
+
+.cancel-appointment:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.reschedule-panel {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f3faf8;
+  border: 1px solid #d5e9e3;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reschedule-panel h3 {
+  margin: 0 0 8px;
+  color: #164b47;
+}
+
+.reschedule-panel label {
+  font-weight: 600;
+  color: #526e69;
+  font-size: 14px;
+}
+
+.reschedule-panel input,
+.reschedule-panel select {
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cfe2df;
+  border-radius: 9px;
+  background: #fff;
+  color: #164b47;
+  font: inherit;
+}
+
+.reschedule-panel input:disabled,
+.reschedule-panel select:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.reschedule-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.reschedule-actions button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #168b7b;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.reschedule-actions button:hover {
+  background: #087568;
+}
+
+.reschedule-actions button:last-child {
+  background: #e3eae8;
+  color: #526e69;
+}
+
+.reschedule-actions button:last-child:hover {
+  background: #d5e1de;
+}
+
+.reschedule-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.appointment-empty {
+  background: #fff;
+  border: 1px solid #dcebe7;
+  border-radius: 15px;
+  padding: 55px 20px;
+  text-align: center;
+  color: #718987;
+}
+
+.appointment-empty svg {
+  color: #168b7b;
+}
+
+.appointment-empty h3 {
+  color: #164b47;
+}
+
+.appointment-error,
+.appointment-success {
+  padding: 13px;
+  margin-bottom: 15px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.appointment-error {
+  color: #c44d3d;
+  background: #fff0ed;
+  border: 1px solid #f2d0ca;
+}
+
+.appointment-success {
+  background: #e5f6ef;
+  color: #16845d;
+  border: 1px solid #ccebdd;
+}
+
+.appointment-loading {
+  padding: 40px;
+  text-align: center;
+  color: #718987;
+}
+
+/* Keyboard accessibility */
+
+.my-appointments button:focus-visible,
+.my-appointments select:focus-visible,
+.my-appointments input:focus-visible {
+  outline: 2px solid #168b7b;
+  outline-offset: 3px;
+}
+
+/* Dark mode */
+
+body.dermalytix-dark .my-appointments {
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .appointment-summary div,
+body.dermalytix-dark .appointment-card,
+body.dermalytix-dark .appointment-empty {
+  background: #192d30;
+  border-color: #304748;
+}
+
+body.dermalytix-dark .appointment-summary span,
+body.dermalytix-dark .appointment-doctor p,
+body.dermalytix-dark .appointment-toolbar select,
+body.dermalytix-dark .appointment-information p {
+  color: #a2b5b5;
+}
+
+body.dermalytix-dark .appointment-summary strong,
+body.dermalytix-dark .appointment-doctor h3,
+body.dermalytix-dark .appointment-information strong,
+body.dermalytix-dark .appointment-empty h3 {
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .appointment-toolbar select,
+body.dermalytix-dark .reschedule-panel input,
+body.dermalytix-dark .reschedule-panel select {
+  background: #20383a;
+  border-color: #3a5555;
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .reschedule-panel {
+  background: #20383a;
+  border-color: #3a5555;
+}
+
+body.dermalytix-dark .reschedule-panel h3,
+body.dermalytix-dark .reschedule-panel label {
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .cancel-appointment {
+  background: #3b2928;
+  border-color: #70413d;
+  color: #ffb8ae;
+}
+
+body.dermalytix-dark .reschedule-appointment {
+  background: #244642;
+  color: #a8e5d8;
+}
+
+body.dermalytix-dark .appointment-error {
+  background: #492d2b;
+  border-color: #70413d;
+  color: #ffb8ae;
+}
+
+body.dermalytix-dark .appointment-success {
+  background: #1d4035;
+  border-color: #315f4d;
+  color: #a8e5c1;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .my-appointments {
+    padding: 15px;
+  }
+
+  .my-appointments-heading h2 {
+    font-size: 25px;
+  }
+
+  .appointment-summary {
+    gap: 8px;
+  }
+
+  .appointment-summary div {
+    padding: 13px;
+  }
+
+  .appointment-summary strong {
+    font-size: 21px;
+  }
+
+  .appointment-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .appointment-toolbar select,
+  .appointment-refresh {
+    flex: 1;
+  }
+
+  .appointment-doctor {
+    align-items: flex-start;
+  }
+
+  .appointment-status {
+    margin-left: 0;
+  }
+
+  .appointment-information {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .appointment-card {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .appointment-actions,
+  .reschedule-actions {
+    flex-direction: column;
+  }
+
+  .appointment-actions button,
+  .reschedule-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .appointment-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .my-appointments * {
+    transition: none !important;
+  }
+}

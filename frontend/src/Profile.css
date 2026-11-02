@@ -1,0 +1,247 @@
+.profile-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 0 40px;
+  color: #193c37;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+.profile-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-heading h2 {
+  font-size: 27px;
+  margin: 0 0 8px;
+  color: #193c37;
+}
+
+.profile-heading p {
+  color: #81968d;
+  font-size: 14px;
+  margin: 0;
+}
+
+.profile-avatar {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #e2f5ed;
+  color: #15977c;
+  border-radius: 50%;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e5efea;
+  border-radius: 20px;
+  padding: 38px;
+  box-shadow: 0 8px 30px rgba(30, 80, 65, 0.04);
+}
+
+.profile-card h3 {
+  font-size: 21px;
+  margin: 0 0 8px;
+  color: #19483e;
+}
+
+.profile-description {
+  color: #82958d;
+  font-size: 14px;
+  margin: 0 0 30px;
+  line-height: 1.6;
+}
+
+.profile-card label {
+  display: block;
+  margin: 22px 0 9px;
+  color: #31584d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-page .profile-card input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 54px;
+  padding: 0 16px;
+  border: 1px solid #dce9e3;
+  border-radius: 10px;
+  background: #f8fbf9;
+  color: #23483e;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.profile-page .profile-card input:focus {
+  border-color: #15977c;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(21, 151, 124, 0.1);
+}
+
+.profile-page .profile-card input::placeholder {
+  color: #9aada5;
+}
+
+.profile-page .profile-card input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.profile-save {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 190px;
+  min-height: 52px;
+  padding: 0 22px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  background: #15977c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.profile-save:hover {
+  background: #08745f;
+  transform: translateY(-1px);
+}
+
+.profile-save:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-message {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 18px 0 0;
+}
+
+.profile-message.success {
+  color: #16866f;
+}
+
+.profile-message.error {
+  color: #c04444;
+}
+
+.profile-spinner {
+  animation: profile-spin 1s linear infinite;
+}
+
+@keyframes profile-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-card button:focus-visible,
+.profile-card input:focus-visible {
+  outline: 2px solid #15977c;
+  outline-offset: 3px;
+}
+
+/* Dark mode */
+
+body.dermalytix-dark .profile-page {
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .profile-heading h2,
+body.dermalytix-dark .profile-card h3 {
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .profile-heading p,
+body.dermalytix-dark .profile-description {
+  color: #a2b5b5;
+}
+
+body.dermalytix-dark .profile-card {
+  background: #192d30;
+  border-color: #304748;
+}
+
+body.dermalytix-dark .profile-card label {
+  color: #c2d5d2;
+}
+
+body.dermalytix-dark .profile-page .profile-card input {
+  background: #20383a;
+  border-color: #3a5555;
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .profile-page .profile-card input:focus {
+  border-color: #15977c;
+  background: #243f40;
+}
+
+body.dermalytix-dark .profile-avatar {
+  background: #244642;
+  color: #8bd8c5;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 5px 0 30px;
+  }
+
+  .profile-heading {
+    margin-bottom: 22px;
+  }
+
+  .profile-heading h2 {
+    font-size: 22px;
+  }
+
+  .profile-avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .profile-card {
+    padding: 23px 18px;
+    border-radius: 15px;
+  }
+
+  .profile-card h3 {
+    font-size: 19px;
+  }
+
+  .profile-save {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-save,
+  .profile-page .profile-card input {
+    transition: none;
+  }
+
+  .profile-spinner {
+    animation: none;
+  }
+}

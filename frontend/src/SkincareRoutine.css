@@ -1,0 +1,402 @@
+.skincare-routine {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #104c48;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+.skincare-routine h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.skincare-routine h2 {
+  color: #104c48;
+}
+
+.routine-progress,
+.routine-card,
+.routine-history,
+.routine-weekly-stats {
+  background: #fff;
+  border: 1px solid #dcebe8;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 4px 16px rgba(16, 76, 72, 0.04);
+}
+
+.routine-progress strong {
+  display: block;
+  font-size: 36px;
+  color: #168d7b;
+  margin: 10px 0;
+}
+
+.routine-progress-track {
+  height: 12px;
+  background: #e5f0ee;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.routine-progress-track div {
+  height: 100%;
+  background: #168d7b;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.routine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.routine-card h2,
+.routine-history h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.routine-task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5efed;
+  cursor: pointer;
+}
+
+.routine-task input {
+  width: 19px;
+  height: 19px;
+  accent-color: #168d7b;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.routine-task:last-child {
+  border-bottom: none;
+}
+
+.routine-history-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5efed;
+}
+
+.routine-history-row:last-child {
+  border-bottom: none;
+}
+
+.routine-note {
+  font-size: 13px;
+  color: #718782;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.routine-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.routine-completed-badge {
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #e5f7ef;
+  color: #168354;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.routine-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0 24px;
+}
+
+.routine-stat-card {
+  background: #f2f8f7;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.routine-stat-card strong {
+  font-size: 26px;
+  color: #087f78;
+}
+
+.routine-stat-card span,
+.routine-stat-card small {
+  color: #647572;
+  font-size: 13px;
+}
+
+.routine-week-bars {
+  height: 125px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.routine-week-day {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.routine-week-bar-track {
+  height: 100%;
+  width: 100%;
+  max-width: 34px;
+  background: #edf3f2;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.routine-week-bar {
+  width: 100%;
+  min-height: 0;
+  background: #159b91;
+  border-radius: 8px;
+  transition: height 0.3s ease;
+}
+
+.routine-week-day span {
+  font-size: 12px;
+  color: #647572;
+}
+
+.routine-reminders {
+  margin: 22px 0;
+}
+
+.routine-reminder-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.routine-reminder-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: #168d7b;
+}
+
+.routine-reminder-times {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.routine-reminder-times label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #526765;
+}
+
+.routine-reminder-times input {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #dce8e6;
+  border-radius: 9px;
+  font: inherit;
+  color: #104c48;
+  background: #fff;
+}
+
+.routine-reset-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  margin: 18px 0;
+  border: 1px solid #e5bcbc;
+  border-radius: 9px;
+  background: #fff7f7;
+  color: #b54747;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.routine-reset-button:hover {
+  background: #fdeaea;
+}
+
+.routine-cloud-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #087f78;
+  margin: 8px 0 18px;
+}
+
+.routine-cloud-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Add Product */
+
+.routine-add-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.routine-add-form input[type="text"] {
+  flex: 1;
+  min-width: 180px;
+  height: 46px;
+  padding: 0 14px;
+  background: #fff;
+  color: #104c48;
+  border: 1px solid #d6e5e2;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.routine-add-form select,
+.routine-add-form button {
+  height: 46px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.routine-add-form select {
+  min-width: 125px;
+  padding: 0 12px;
+  background: #fff;
+  color: #104c48;
+  border: 1px solid #d6e5e2;
+}
+
+.routine-add-form button {
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #159b91;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.routine-add-form button:hover {
+  background: #087f78;
+}
+
+/* Focus accessibility */
+
+.skincare-routine button:focus-visible,
+.skincare-routine input:focus-visible,
+.skincare-routine select:focus-visible {
+  outline: 2px solid #159b91;
+  outline-offset: 3px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .routine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .routine-card,
+  .routine-history,
+  .routine-progress,
+  .routine-weekly-stats {
+    padding: 18px;
+  }
+
+  .routine-history-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .routine-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .routine-reminder-times {
+    grid-template-columns: 1fr;
+  }
+
+  .routine-add-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .routine-add-form input,
+  .routine-add-form select,
+  .routine-add-form button {
+    width: 100%;
+  }
+
+  .routine-heading {
+    align-items: flex-start;
+  }
+
+  .routine-completed-badge {
+    margin-left: 0;
+  }
+
+  .skincare-routine h1 {
+    font-size: 25px;
+  }
+
+  .routine-progress strong {
+    font-size: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .routine-progress-track div,
+  .routine-week-bar,
+  .routine-reset-button,
+  .routine-add-form button {
+    transition: none;
+  }
+}

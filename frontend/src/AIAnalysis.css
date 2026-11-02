@@ -1,0 +1,708 @@
+/* =====================================
+   DERMALYTIX - AI SKIN ANALYSIS
+===================================== */
+
+.analysis-page {
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 35px;
+  color: #123f39;
+}
+
+.analysis-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  color: #138c7b;
+}
+
+.analysis-heading h1 {
+  font-size: 36px;
+  font-weight: 750;
+  color: #123f39;
+  margin: 0 0 10px;
+}
+
+.analysis-heading p {
+  color: #71847f;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Image upload */
+
+.upload-box {
+  min-height: 300px;
+  border: 2px dashed #91cfc2;
+  border-radius: 22px;
+  background: #fff;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 13px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.upload-box:hover {
+  background: #f2faf8;
+  border-color: #159783;
+}
+
+.upload-box > svg {
+  color: #159783;
+}
+
+.upload-box h3 {
+  font-size: 23px;
+  margin: 5px 0;
+  color: #164b49;
+}
+
+.upload-box p {
+  color: #71847f;
+  margin: 5px 0;
+  overflow-wrap: anywhere;
+}
+
+.upload-box input[type="file"] {
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #dcebe7;
+  border-radius: 9px;
+  background: #f8fcfb;
+  color: #34514d;
+}
+
+.analysis-preview {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+/* Skin concerns */
+
+.skin-concern-box,
+.saved-concerns-section {
+  background: #fff;
+  border: 1px solid #dcebe6;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 25px 0;
+  box-shadow: 0 5px 20px rgba(20, 80, 70, 0.04);
+}
+
+.concern-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #148f80;
+}
+
+.concern-title h2,
+.concern-title h3 {
+  color: #164b49;
+  margin: 0;
+}
+
+.skin-concern-box p,
+.saved-concerns-section > p {
+  color: #71817f;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.skin-concern-box textarea,
+.saved-concern-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 12px 0;
+  border: 1px solid #d8e7e3;
+  border-radius: 10px;
+  background: #fff;
+  color: #183d37;
+  font: inherit;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+}
+
+.skin-concern-box textarea:focus,
+.saved-concern-card textarea:focus {
+  border-color: #148f80;
+  box-shadow: 0 0 0 3px rgba(20, 143, 128, 0.1);
+}
+
+.skin-concern-box textarea::placeholder {
+  color: #8a9b96;
+}
+
+.skin-concern-box small {
+  color: #82918e;
+  font-size: 12px;
+}
+
+/* Main analyze button */
+
+.analyze-button {
+  display: block;
+  margin: 28px auto;
+  padding: 17px 45px;
+  border: none;
+  border-radius: 13px;
+  background: #148d7b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.analyze-button:hover:not(:disabled) {
+  background: #107967;
+  transform: translateY(-2px);
+}
+
+.analyze-button:disabled {
+  background: #a9c2bc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading and messages */
+
+.analysis-error,
+.analysis-save-status,
+.analysis-loading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.analysis-error {
+  background: #fff0ef;
+  color: #b42318;
+  border: 1px solid #f3d2cf;
+}
+
+.analysis-save-status {
+  background: #eaf7ef;
+  color: #18794e;
+  border: 1px solid #ccebdd;
+}
+
+.analysis-loading {
+  justify-content: center;
+  color: #138c7b;
+}
+
+.analysis-note {
+  text-align: center;
+  color: #758984;
+  font-size: 14px;
+  margin: 25px 0;
+  line-height: 1.6;
+}
+
+/* Analysis results */
+
+.analysis-result {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  margin: 35px auto;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #dcebe7;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(20, 80, 70, 0.07);
+  color: #173d39;
+}
+
+.result-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #138c7b;
+  margin-bottom: 25px;
+}
+
+.result-title h2 {
+  margin: 0;
+  color: #174e46;
+  font-size: 23px;
+}
+
+.result-section {
+  margin: 25px 0;
+}
+
+.result-section h3,
+.confidence-card h3 {
+  margin-bottom: 12px;
+  color: #174e46;
+}
+
+.result-section p,
+.result-section li {
+  color: #526b68;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.result-section ul,
+.next-steps ul {
+  padding-left: 22px;
+}
+
+.result-section li,
+.next-steps li {
+  margin-bottom: 9px;
+}
+
+.result-helper {
+  color: #738681;
+  font-size: 14px;
+}
+
+/* Result status */
+
+.result-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
+
+.result-status.uncertain {
+  background: #fff5e8;
+  color: #9a5b12;
+  border: 1px solid #f2d8b2;
+}
+
+.result-status.review {
+  background: #eaf6f2;
+  color: #176c5c;
+  border: 1px solid #cce9df;
+}
+
+.result-status strong {
+  display: block;
+}
+
+.result-status p {
+  margin: 6px 0 0;
+  line-height: 1.5;
+}
+
+/* Confidence score */
+
+.confidence-card {
+  background: #f3faf8;
+  border: 1px solid #dceee8;
+  padding: 22px;
+  border-radius: 16px;
+  margin: 25px 0;
+}
+
+.confidence-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #138c7b;
+  margin: 12px 0;
+}
+
+.confidence-track {
+  width: 100%;
+  height: 11px;
+  border-radius: 20px;
+  background: #dce9e5;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.confidence-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: #159783;
+  transition: width 0.4s ease;
+}
+
+.confidence-card p {
+  color: #526b68;
+  line-height: 1.6;
+}
+
+.confidence-card small {
+  display: block;
+  color: #71827e;
+  line-height: 1.6;
+}
+
+/* Possible matches */
+
+.possible-matches {
+  display: grid;
+  gap: 12px;
+}
+
+.match-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  border: 1px solid #e0ebe7;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.match-card div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.match-card strong {
+  overflow-wrap: anywhere;
+  color: #174e46;
+}
+
+.match-card span {
+  font-size: 13px;
+  color: #83928e;
+}
+
+.match-card > strong:last-child {
+  color: #138c7b;
+  white-space: nowrap;
+}
+
+/* Next steps */
+
+.next-steps {
+  background: #f6faf9;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.next-steps h3 {
+  color: #174e46;
+}
+
+/* Specialist suggestion */
+
+.specialist-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #edf7f5;
+  color: #176c5c;
+  margin: 20px 0;
+}
+
+.specialist-card p {
+  margin: 5px 0 0;
+  color: #315e58;
+}
+
+/* Medical disclaimer */
+
+.medical-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f3f6f5;
+  color: #667a74;
+  padding: 17px;
+  border-radius: 13px;
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.medical-disclaimer svg {
+  flex-shrink: 0;
+}
+
+.medical-disclaimer p {
+  margin: 0;
+}
+
+/* Result actions */
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.result-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.secondary-result-button {
+  background: #e8f4f1;
+  color: #147d6d;
+}
+
+.secondary-result-button:hover {
+  background: #d8eee7;
+}
+
+.download-result-button {
+  background: #148d7b;
+  color: #fff;
+}
+
+.download-result-button:hover {
+  background: #107967;
+}
+
+/* Saved concerns */
+
+.saved-concern-card,
+.concern-empty {
+  background: #f7fbf9;
+  border: 1px solid #e0eeea;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.saved-concern-card p {
+  color: #344c49;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.saved-concern-card small {
+  color: #82918e;
+  font-size: 12px;
+}
+
+.concern-history-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.concern-history-actions button,
+.saved-concern-card > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #148f80;
+  color: #fff;
+  cursor: pointer;
+  margin: 8px 8px 0 0;
+}
+
+.concern-history-actions button:last-child {
+  background: #fff0ee;
+  color: #bd5147;
+}
+
+.saved-concern-card > button:last-child {
+  background: #e9f1ef;
+  color: #315e58;
+}
+
+/* Dark mode */
+
+body.dermalytix-dark .analysis-page {
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .analysis-heading,
+body.dermalytix-dark .analysis-heading h1,
+body.dermalytix-dark .analysis-heading p {
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .upload-box,
+body.dermalytix-dark .skin-concern-box,
+body.dermalytix-dark .saved-concerns-section,
+body.dermalytix-dark .analysis-result,
+body.dermalytix-dark .match-card {
+  background: #1c2b30;
+  border-color: #3c5b5b;
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .upload-box h3,
+body.dermalytix-dark .concern-title h2,
+body.dermalytix-dark .concern-title h3,
+body.dermalytix-dark .result-title h2,
+body.dermalytix-dark .result-section h3,
+body.dermalytix-dark .confidence-card h3,
+body.dermalytix-dark .next-steps h3 {
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .upload-box p,
+body.dermalytix-dark .skin-concern-box p,
+body.dermalytix-dark .saved-concerns-section > p,
+body.dermalytix-dark .result-section p,
+body.dermalytix-dark .result-section li,
+body.dermalytix-dark .match-card strong {
+  color: #d0e1dc;
+}
+
+body.dermalytix-dark .skin-concern-box textarea,
+body.dermalytix-dark .saved-concern-card textarea {
+  background: #101c20;
+  border-color: #3c5b5b;
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .saved-concern-card,
+body.dermalytix-dark .concern-empty,
+body.dermalytix-dark .confidence-card,
+body.dermalytix-dark .next-steps,
+body.dermalytix-dark .medical-disclaimer {
+  background: #16272b;
+  border-color: #3c5b5b;
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .confidence-card p,
+body.dermalytix-dark .confidence-card small,
+body.dermalytix-dark .saved-concern-card p,
+body.dermalytix-dark .medical-disclaimer p {
+  color: #d0e1dc;
+}
+
+body.dermalytix-dark .specialist-card {
+  background: #193a32;
+  color: #a5e5ce;
+}
+
+body.dermalytix-dark .specialist-card p {
+  color: #d0e1dc;
+}
+
+body.dermalytix-dark .result-status.uncertain {
+  background: #493a25;
+  border-color: #735b36;
+  color: #ffd28a;
+}
+
+body.dermalytix-dark .result-status.review {
+  background: #193a32;
+  border-color: #326b59;
+  color: #a5e5ce;
+}
+
+body.dermalytix-dark .result-status p {
+  color: inherit;
+}
+
+body.dermalytix-dark .analysis-error {
+  background: #402727;
+  border-color: #754444;
+  color: #ffb5b5;
+}
+
+body.dermalytix-dark .analysis-save-status {
+  background: #193a32;
+  border-color: #326b59;
+  color: #a5e5ce;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .analysis-page {
+    padding: 18px;
+  }
+
+  .analysis-heading h1 {
+    font-size: 28px;
+  }
+
+  .upload-box {
+    min-height: 230px;
+    padding: 22px 14px;
+  }
+
+  .skin-concern-box,
+  .saved-concerns-section {
+    padding: 16px;
+  }
+
+  .analysis-result {
+    padding: 18px;
+  }
+
+  .result-actions {
+    flex-direction: column;
+  }
+
+  .result-actions button {
+    width: 100%;
+  }
+
+  .match-card {
+    align-items: flex-start;
+  }
+
+  .confidence-card {
+    padding: 16px;
+  }
+}
+
+/* Accessibility */
+
+.analysis-page button:focus-visible,
+.analysis-page textarea:focus-visible,
+.analysis-page input:focus-visible {
+  outline: 2px solid #148d7b;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analysis-page *,
+  .analysis-result * {
+    scroll-behavior: auto;
+    transition: none !important;
+  }
+}

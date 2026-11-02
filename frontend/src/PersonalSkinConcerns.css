@@ -1,0 +1,302 @@
+.concerns-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  color: #164b49;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+.concerns-heading {
+  margin-bottom: 25px;
+}
+
+.concerns-heading span {
+  color: #169b89;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.concerns-heading h2 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.concerns-heading p {
+  color: #71817f;
+  line-height: 1.7;
+}
+
+.concern-form {
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #e0eeea;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(20, 80, 70, 0.05);
+}
+
+.concern-form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.concern-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid #d8e7e3;
+  border-radius: 10px;
+  resize: vertical;
+  font: inherit;
+  color: #164b49;
+  background: #fff;
+  outline: none;
+  line-height: 1.6;
+}
+
+.concern-form textarea:focus {
+  border-color: #169b89;
+  box-shadow: 0 0 0 3px rgba(22, 155, 137, 0.1);
+}
+
+.concern-form textarea:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.concern-form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.concern-form-bottom > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.concern-form-bottom span,
+.concern-card small {
+  color: #82918e;
+  font-size: 12px;
+}
+
+.concern-form button,
+.concern-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 17px;
+  cursor: pointer;
+  background: #148f80;
+  color: #fff;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.concern-form button:hover,
+.concern-actions button:first-child:hover {
+  background: #087568;
+}
+
+.concern-form button:disabled,
+.concern-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.concern-form .cancel-concern {
+  background: #e9f1ef;
+  color: #315e58;
+}
+
+.concern-form .cancel-concern:hover {
+  background: #dcebe7;
+}
+
+.saved-concerns {
+  margin-top: 35px;
+}
+
+.saved-concerns h3 {
+  margin-bottom: 18px;
+}
+
+.concern-card,
+.concern-empty {
+  background: #fff;
+  border: 1px solid #e0eeea;
+  border-radius: 13px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.concern-card p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+  color: #344c49;
+  margin-top: 0;
+}
+
+.concern-card small {
+  display: block;
+}
+
+.concern-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.concern-actions button:last-child {
+  background: #fff0ee;
+  color: #bd5147;
+}
+
+.concern-actions button:last-child:hover {
+  background: #ffe1dd;
+}
+
+.concern-error,
+.concern-success {
+  margin-top: 12px;
+  padding: 11px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.concern-error {
+  color: #b42318;
+  background: #fff1f0;
+  border: 1px solid #f4c7c3;
+}
+
+.concern-success {
+  color: #16805d;
+  background: #edfaf3;
+  border: 1px solid #c9ebd8;
+}
+
+.concern-empty {
+  text-align: center;
+  padding: 35px;
+  color: #758783;
+}
+
+.concern-empty h4 {
+  color: #315e58;
+  margin-top: 0;
+}
+
+.concern-disclaimer {
+  color: #87938f;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 25px;
+}
+
+.concerns-page button:focus-visible,
+.concerns-page textarea:focus-visible {
+  outline: 2px solid #169b89;
+  outline-offset: 3px;
+}
+
+/* Dark mode */
+
+body.dermalytix-dark .concerns-page {
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .concern-form,
+body.dermalytix-dark .concern-card,
+body.dermalytix-dark .concern-empty {
+  background: #192d30;
+  border-color: #304748;
+}
+
+body.dermalytix-dark .concerns-heading p,
+body.dermalytix-dark .concern-card small,
+body.dermalytix-dark .concern-disclaimer {
+  color: #a2b5b5;
+}
+
+body.dermalytix-dark .concern-card p,
+body.dermalytix-dark .concern-form label,
+body.dermalytix-dark .concern-empty h4 {
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .concern-form textarea {
+  background: #20383a;
+  color: #e2eeee;
+  border-color: #3a5555;
+}
+
+body.dermalytix-dark .concern-form .cancel-concern {
+  background: #304748;
+  color: #e2eeee;
+}
+
+body.dermalytix-dark .concern-actions button:last-child {
+  background: #49302f;
+  color: #ffb8ae;
+}
+
+body.dermalytix-dark .concern-error {
+  background: #492d2b;
+  border-color: #70413d;
+  color: #ffb8ae;
+}
+
+body.dermalytix-dark .concern-success {
+  background: #1d4035;
+  border-color: #315f4d;
+  color: #a8e5c1;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .concerns-page {
+    margin: 15px auto;
+  }
+
+  .concerns-heading h2 {
+    font-size: 24px;
+  }
+
+  .concern-form {
+    padding: 18px;
+  }
+
+  .concern-form-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .concern-form-bottom > div {
+    width: 100%;
+  }
+
+  .concern-form-bottom button {
+    flex: 1;
+  }
+
+  .concern-card,
+  .concern-empty {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concerns-page * {
+    transition: none !important;
+  }
+}

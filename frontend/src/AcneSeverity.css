@@ -1,0 +1,372 @@
+/* =====================================
+   DERMALYTIX - ACNE SEVERITY ANALYSIS
+===================================== */
+
+.acne-analysis {
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  padding: 28px;
+  color: #183b3a;
+  background: #f4f8f7;
+  border-radius: 18px;
+}
+
+.acne-analysis h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #183b3a;
+  font-size: 26px;
+}
+
+.acne-analysis > p {
+  color: #607875;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* Image upload */
+
+.acne-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 180px;
+  padding: 25px;
+  border: 2px dashed #269889;
+  border-radius: 15px;
+  background: #fff;
+  color: #218b7c;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.acne-upload:hover {
+  background: #f0faf6;
+  border-color: #08745f;
+}
+
+.acne-upload:focus-within {
+  outline: 2px solid #218b7c;
+  outline-offset: 3px;
+}
+
+.acne-image-preview {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #dcebe6;
+  border-radius: 14px;
+}
+
+.acne-image-preview img {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  max-height: 280px;
+  height: auto;
+  margin: 0 auto 10px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.acne-image-preview p {
+  color: #526b68;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* Questionnaire */
+
+.acne-question {
+  margin-top: 25px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #dcebe6;
+  border-radius: 14px;
+}
+
+.acne-question h3 {
+  color: #183b3a;
+  font-size: 17px;
+  margin: 0 0 15px;
+}
+
+.acne-question p {
+  color: #718582;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.acne-question label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 8px;
+  color: #34514d;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.acne-question input[type="radio"],
+.acne-question input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  accent-color: #218b7c;
+  cursor: pointer;
+}
+
+.acne-question textarea {
+  width: 100%;
+  min-height: 120px;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #dcebe6;
+  border-radius: 9px;
+  background: #fff;
+  color: #183b3a;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+}
+
+.acne-question textarea:focus {
+  border-color: #218b7c;
+  box-shadow: 0 0 0 3px rgba(33, 139, 124, 0.1);
+}
+
+.acne-question textarea::placeholder {
+  color: #8a9b96;
+}
+
+/* Buttons */
+
+.acne-analysis button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 9px;
+  background: #218b7c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.acne-analysis button:hover {
+  background: #176e61;
+  transform: translateY(-1px);
+}
+
+.acne-analysis button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.acne-spinner {
+  animation: acne-spin 1s linear infinite;
+}
+
+@keyframes acne-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Messages */
+
+.acne-error {
+  color: #d14343 !important;
+  background: #fff0ef;
+  border: 1px solid #f3d2cf;
+  border-radius: 9px;
+  padding: 12px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.acne-success {
+  color: #16866f !important;
+  background: #eaf7f1;
+  border: 1px solid #ccebdd;
+  border-radius: 9px;
+  padding: 12px;
+  margin-top: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Analysis results */
+
+.acne-result {
+  margin-top: 28px;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid #dcebe6;
+  border-radius: 16px;
+  color: #183b3a;
+}
+
+.acne-result h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #218b7c;
+  margin: 0 0 20px;
+}
+
+.acne-result h4 {
+  color: #218b7c;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.acne-result p,
+.acne-result li {
+  color: #526b68;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.acne-result ul {
+  padding-left: 22px;
+}
+
+.acne-result li {
+  margin-bottom: 7px;
+}
+
+.acne-warning {
+  padding: 13px;
+  background: #fff3df;
+  color: #925600 !important;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.acne-disclaimer {
+  border-top: 1px solid #dcebe6;
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+/* Dark mode */
+
+body.dermalytix-dark .acne-analysis {
+  background: #101c20;
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .acne-analysis h2,
+body.dermalytix-dark .acne-analysis > p {
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .acne-upload,
+body.dermalytix-dark .acne-image-preview,
+body.dermalytix-dark .acne-question,
+body.dermalytix-dark .acne-result {
+  background: #1c2b30;
+  border-color: #3c5b5b;
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .acne-question h3,
+body.dermalytix-dark .acne-question p,
+body.dermalytix-dark .acne-question label,
+body.dermalytix-dark .acne-result h3,
+body.dermalytix-dark .acne-result h4,
+body.dermalytix-dark .acne-result p,
+body.dermalytix-dark .acne-result li,
+body.dermalytix-dark .acne-image-preview p {
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .acne-question textarea {
+  background: #101c20;
+  border-color: #3c5b5b;
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .acne-question textarea::placeholder {
+  color: #a0b5ad;
+}
+
+body.dermalytix-dark .acne-warning {
+  background: #493a25;
+  color: #ffd28a !important;
+}
+
+body.dermalytix-dark .acne-disclaimer {
+  border-color: #3c5b5b;
+}
+
+body.dermalytix-dark .acne-error {
+  background: #402727;
+  border-color: #754444;
+  color: #ffb5b5 !important;
+}
+
+body.dermalytix-dark .acne-success {
+  background: #193a32;
+  border-color: #326b59;
+  color: #a5e5ce !important;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .acne-analysis {
+    padding: 16px;
+  }
+
+  .acne-analysis h2 {
+    font-size: 22px;
+  }
+
+  .acne-question,
+  .acne-result {
+    padding: 16px;
+  }
+
+  .acne-upload {
+    min-height: 150px;
+    padding: 18px;
+  }
+
+  .acne-analysis button {
+    width: 100%;
+  }
+}
+
+/* Accessibility */
+
+.acne-analysis button:focus-visible,
+.acne-question input:focus-visible {
+  outline: 2px solid #218b7c;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acne-spinner {
+    animation: none;
+  }
+
+  .acne-analysis button,
+  .acne-upload {
+    transition: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "mild": 0,
+    "moderate": 1,
+    "severe": 2,
+    "very_severe": 3
+}

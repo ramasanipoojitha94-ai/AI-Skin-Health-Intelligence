@@ -1,0 +1,476 @@
+/* =====================================
+   DERMALYTIX - HEALTH REPORTS
+===================================== */
+
+.health-reports {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 28px;
+  color: #183b3a;
+  background: #f4f8f7;
+}
+
+/* Heading */
+
+.reports-heading {
+  margin-bottom: 28px;
+}
+
+.reports-heading > span {
+  color: #168b7b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.reports-heading h2 {
+  margin: 9px 0;
+  color: #123f3b;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.reports-heading p {
+  color: #71847f;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Summary cards */
+
+.reports-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.reports-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #dcebe8;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(20, 80, 70, 0.04);
+}
+
+.reports-summary svg {
+  color: #168b7b;
+}
+
+.reports-summary span {
+  color: #71847f;
+  font-size: 14px;
+}
+
+.reports-summary strong {
+  color: #123f3b;
+  font-size: 28px;
+}
+
+/* Toolbar */
+
+.reports-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.reports-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+  min-width: 200px;
+  padding: 0 13px;
+  background: #fff;
+  border: 1px solid #d5e5e0;
+  border-radius: 10px;
+}
+
+.reports-search svg {
+  flex-shrink: 0;
+  color: #82938e;
+}
+
+.reports-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #183b3a;
+  font-size: 14px;
+}
+
+.reports-toolbar select {
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid #d5e5e0;
+  border-radius: 10px;
+  background: #fff;
+  color: #183b3a;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.reports-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #168b7b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reports-toolbar button:hover:not(:disabled) {
+  background: #107565;
+}
+
+.reports-toolbar button:disabled {
+  background: #a9c2bc;
+  cursor: not-allowed;
+}
+
+/* Report cards */
+
+.reports-list {
+  display: grid;
+  gap: 15px;
+}
+
+.report-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 21px;
+  background: #fff;
+  border: 1px solid #dcebe8;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(20, 80, 70, 0.04);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.report-card:hover {
+  border-color: #a8d5c9;
+  transform: translateY(-2px);
+}
+
+.report-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  background: #e8f5f1;
+  color: #168b7b;
+}
+
+.report-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.report-details h3 {
+  margin: 0 0 8px;
+  color: #183b3a;
+  font-size: 17px;
+}
+
+.report-details p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 7px 0;
+  color: #71847f;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.report-details .report-result {
+  display: block;
+  color: #345b54;
+  font-size: 14px;
+}
+
+.report-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 11px 15px;
+  border: none;
+  border-radius: 9px;
+  background: #168b7b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.report-download:hover {
+  background: #107565;
+}
+
+/* Empty state */
+
+.reports-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 20px;
+  margin: 25px 0;
+  background: #fff;
+  border: 1px dashed #c9dfd8;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.reports-empty svg {
+  color: #168b7b;
+  margin-bottom: 15px;
+}
+
+.reports-empty h3 {
+  margin: 0 0 8px;
+  color: #183b3a;
+  font-size: 19px;
+}
+
+.reports-empty p {
+  max-width: 400px;
+  color: #71847f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Loading */
+
+.reports-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 250px;
+  color: #168b7b;
+}
+
+.reports-loading p {
+  color: #526b68;
+}
+
+.reports-spinner {
+  animation: reports-spin 1s linear infinite;
+}
+
+@keyframes reports-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+
+.reports-error {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  margin: 15px 0;
+  border: 1px solid #f0ceca;
+  border-radius: 10px;
+  background: #fff0ef;
+  color: #b42318;
+}
+
+.reports-error p {
+  margin: 0;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.reports-error button {
+  padding: 8px 13px;
+  border: none;
+  border-radius: 7px;
+  background: #b42318;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Disclaimer */
+
+.reports-disclaimer {
+  margin-top: 28px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #edf5f2;
+  color: #667a74;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Dark mode */
+
+body.dermalytix-dark .health-reports {
+  background: #101c20;
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .reports-heading h2,
+body.dermalytix-dark .reports-summary strong,
+body.dermalytix-dark .report-details h3,
+body.dermalytix-dark .reports-empty h3 {
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .reports-heading p,
+body.dermalytix-dark .reports-summary span,
+body.dermalytix-dark .report-details p,
+body.dermalytix-dark .reports-empty p {
+  color: #b4c9c3;
+}
+
+body.dermalytix-dark .reports-summary > div,
+body.dermalytix-dark .report-card,
+body.dermalytix-dark .reports-empty {
+  background: #1c2b30;
+  border-color: #34474c;
+}
+
+body.dermalytix-dark .report-icon {
+  background: #193a32;
+  color: #8dd9c3;
+}
+
+body.dermalytix-dark .report-details .report-result {
+  color: #c1d9d2;
+}
+
+body.dermalytix-dark .reports-search,
+body.dermalytix-dark .reports-toolbar select {
+  background: #1c2b30;
+  border-color: #40565a;
+}
+
+body.dermalytix-dark .reports-search input,
+body.dermalytix-dark .reports-toolbar select {
+  color: #e8f3f1;
+}
+
+body.dermalytix-dark .reports-search input::placeholder {
+  color: #9aafaa;
+}
+
+body.dermalytix-dark .reports-disclaimer {
+  background: #1c2b30;
+  color: #b4c9c3;
+}
+
+body.dermalytix-dark .reports-loading p {
+  color: #d0e1dc;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .reports-toolbar {
+    align-items: stretch;
+  }
+
+  .reports-search {
+    flex-basis: 100%;
+  }
+
+  .report-card {
+    flex-wrap: wrap;
+  }
+
+  .report-download {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .health-reports {
+    padding: 15px;
+  }
+
+  .reports-heading h2 {
+    font-size: 25px;
+  }
+
+  .reports-summary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .reports-summary > div {
+    padding: 17px;
+  }
+
+  .reports-toolbar {
+    flex-direction: column;
+  }
+
+  .reports-search,
+  .reports-toolbar select,
+  .reports-toolbar button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .report-card {
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .report-details {
+    flex-basis: calc(100% - 65px);
+  }
+
+  .report-download {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Accessibility */
+
+.health-reports button:focus-visible,
+.health-reports input:focus-visible,
+.health-reports select:focus-visible {
+  outline: 2px solid #168b7b;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .health-reports *,
+  .reports-spinner {
+    animation: none !important;
+    transition: none !important;
+  }
+}

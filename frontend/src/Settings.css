@@ -1,0 +1,198 @@
+.settings-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 0 40px;
+  color: #193c37;
+}
+
+.settings-container > h2 {
+  font-size: 27px;
+  margin: 0 0 8px;
+}
+
+.settings-subtitle {
+  color: #81968d;
+  font-size: 14px;
+  margin: 0 0 30px;
+  line-height: 1.6;
+}
+
+.settings-card {
+  width: 100%;
+  max-width: 750px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e5efea;
+  border-radius: 17px;
+  padding: 27px 30px;
+  margin-bottom: 19px;
+  box-shadow: 0 7px 25px rgba(30, 80, 65, 0.035);
+}
+
+.settings-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #19483e;
+  font-size: 17px;
+  margin: 0 0 13px;
+}
+
+.settings-card h3 svg {
+  color: #15977c;
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.settings-card p {
+  color: #82958d;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.settings-card form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.settings-card form label,
+.settings-card > label {
+  display: block;
+  color: #31584d;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 20px 0 9px;
+}
+
+.settings-card form input,
+.settings-card > input {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: 49px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  border: 1px solid #dce9e3;
+  border-radius: 9px;
+  background: #f8fbf9;
+  color: #23483e;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.settings-card form input:focus,
+.settings-card > input:focus {
+  border-color: #15977c;
+  box-shadow: 0 0 0 3px rgba(21, 151, 124, 0.1);
+}
+
+.settings-card button {
+  border: none;
+  background: #15977c;
+  color: #fff;
+  border-radius: 9px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.settings-card button:hover {
+  background: #08745f;
+  transform: translateY(-1px);
+}
+
+.settings-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.settings-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  padding: 12px 0;
+  color: #31584d;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.settings-toggle input {
+  width: 19px;
+  height: 19px;
+  accent-color: #15977c;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.settings-message {
+  max-width: 750px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  margin: 0 0 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.settings-message.success {
+  color: #16866f !important;
+  background: #eaf7f1;
+  border: 1px solid #ccebdd;
+}
+
+.settings-message.error {
+  color: #b84040 !important;
+  background: #fff0ef;
+  border: 1px solid #f4d0cd;
+}
+
+.settings-card .logout-button {
+  background: #fff1f0;
+  color: #c35450;
+}
+
+.settings-card .logout-button:hover {
+  background: #ffe2df;
+}
+
+.settings-card button:focus-visible,
+.settings-card input:focus-visible {
+  outline: 2px solid #15977c;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .settings-container {
+    padding: 5px 0 30px;
+  }
+
+  .settings-container > h2 {
+    font-size: 23px;
+  }
+
+  .settings-card {
+    padding: 22px 17px;
+    border-radius: 13px;
+  }
+
+  .settings-card h3 {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-card button,
+  .settings-card form input {
+    transition: none;
+  }
+}

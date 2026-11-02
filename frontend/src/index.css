@@ -1,0 +1,204 @@
+/* =====================================
+   DERMALYTIX - GLOBAL STYLES
+===================================== */
+
+:root {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+
+  color: #173b3b;
+  background: #f5f9f7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: #138b7c;
+  --primary-dark: #087568;
+  --primary-light: #e4f4ef;
+
+  --background: #f5f9f7;
+  --surface: #ffffff;
+
+  --text-primary: #173b3b;
+  --text-secondary: #718482;
+
+  --border: #e2ece8;
+  --success: #258b65;
+  --danger: #d9534f;
+  --warning: #e5a23b;
+
+  --shadow: 0 8px 28px rgba(24, 65, 58, 0.07);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+}
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Root */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  font-weight: 650;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -1.2px;
+}
+
+h2 {
+  font-size: clamp(22px, 3vw, 30px);
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin-top: 0;
+  color: var(--text-secondary);
+}
+
+small {
+  font-size: 13px;
+}
+
+/* Links */
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* Buttons */
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Inputs */
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: var(--text-primary);
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f5f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b9d4cb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8eb8a9;
+}
+
+/* Selection */
+
+::selection {
+  background: #c8ebe0;
+  color: #173b3b;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
